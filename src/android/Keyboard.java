@@ -32,6 +32,9 @@ public class Keyboard extends CordovaPlugin {
 	    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
 	    callbackContext.success();
 	    return true;
+	} else if("isActive".equals(action)){
+	    callbackContext.success(String.valueOf(imm.isActive));
+	    return true;
 	}
 	callbackContext.error(action + " is not a supported action");
 	return false;
