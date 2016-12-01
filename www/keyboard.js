@@ -87,6 +87,9 @@ Keyboard.show = function() {
 Keyboard.hide = function() {
     exec(null, null, "Keyboard", "hide", []);
 };
+Keyboard.isActive = function(success, fail) {
+    exec(success, fail, "Keyboard", "isActive", []);
+};
 
 Keyboard.isVisible = false;
 Keyboard.automaticScrollToTopOnHiding = false;
